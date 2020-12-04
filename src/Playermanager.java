@@ -8,6 +8,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JTextPane;
 import java.awt.Color;
+import javax.swing.JButton;
 
 
 public class Playermanager {
@@ -732,6 +733,19 @@ public class Playermanager {
 		txtCopper.setBounds(883, 851, 106, 27);
 		frame.getContentPane().add(txtCopper);
 		
+		txtSkillpoints = new JTextField();
+		txtSkillpoints.setText("99");
+		txtSkillpoints.setHorizontalAlignment(SwingConstants.CENTER);
+		txtSkillpoints.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtSkillpoints.setColumns(10);
+		txtSkillpoints.setBounds(246, 879, 30, 25);
+		frame.getContentPane().add(txtSkillpoints);
+		
+		JButton btnSave = new JButton("Speichern");
+		btnSave.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		btnSave.setBounds(693, 868, 166, 39);
+		frame.getContentPane().add(btnSave);
+		
 		
 		
 		
@@ -741,14 +755,6 @@ public class Playermanager {
 		lblCharakterbogen.setBounds(0, 0, 1376, 937);
 		lblCharakterbogen.setIcon(new ImageIcon(Playermanager.class.getResource("/image/charakter bogen.png")));
 		frame.getContentPane().add(lblCharakterbogen);
-		
-		txtSkillpoints = new JTextField();
-		txtSkillpoints.setText("99");
-		txtSkillpoints.setHorizontalAlignment(SwingConstants.CENTER);
-		txtSkillpoints.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		txtSkillpoints.setColumns(10);
-		txtSkillpoints.setBounds(246, 879, 30, 25);
-		frame.getContentPane().add(txtSkillpoints);
 		
 	}
 	

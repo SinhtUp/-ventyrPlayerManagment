@@ -25,5 +25,10 @@
 			<type>1</type>
 			<location>C:/Users/Sinht/Desktop/projekte java/AeventyrPlayerManager/bilder/charakter bogen.png</location>
 		</link>
+		<link>
+			<name>src/image/savebtn.png</name>
+			<type>1</type>
+			<location>C:/Users/Sinht/Desktop/projekte java/AeventyrPlayerManager/bilder/savebtn.png</location>
+		</link>
 	</linkedResources>
 </projectDescription>

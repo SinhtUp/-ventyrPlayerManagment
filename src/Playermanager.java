@@ -24,16 +24,16 @@ public class Playermanager {
 	public JTextPane 
 	txtInventory;
 	
-	
+	//Textfeld Variablen
 	public JTextField 
 			//skillfelder variablen
 			txtSkill1, txtSkill3, txtSkill2, txtSkill4, txtSkill5, txtSkill6, txtSkill7, txtSkill8, txtSkill9,
 			txtSkill10, txtSkill11, txtSkill12, txtSkill13, txtSkill14, txtSkill15, txtSkill16, txtSkill17, txtSkill18,
 			//skillFertigkeitswurf variablen
-			skillFw1, skillFw2, skillFw3, skillFw4, skillFw5, skillFw6, skillFw7, skillFw8, skillFw9, skillFw10, skillFw11,
-			skillFw12, skillFw13, skillFw14, skillFw15, skillFw16, skillFw17, skillFw18,
+			txtskillFw1, txtskillFw2, txtskillFw3, txtskillFw4, txtskillFw5, txtskillFw6, txtskillFw7, txtskillFw8, txtskillFw9, txtskillFw10, txtskillFw11,
+			txtskillFw12, txtskillFw13, txtskillFw14, txtskillFw15, txtskillFw16, txtskillFw17, txtskillFw18,
 			//Waffenslots variablen
-			txtweapon1, txtweapon2, txtweapon3, txtweapon4,
+			txtWeapon1, txtWeapon2, txtWeapon3, txtWeapon4,
 			//waffenFertigkeitswurf variablen
 			txtWeaponFw1, txtWeaponFw2, txtWeaponFw3, txtWeaponFw4,
 			//Waffenschaden variablen
@@ -49,32 +49,16 @@ public class Playermanager {
 			//Leiden variablen
 			txtSuffer1, txtSuffer2, txtSuffer3,
 			//Charackter information Variablen
-			txtAge, txtName, txtFolk, txtJob, txtGold, txtSilver, txtCopper, txtSkillpoints;
-	private JTextField txtDefensepoint1;
-	private JTextField txtDefensepoint2;
-	private JTextField txtDefensepoint3;
-	private JTextField txtDefensepoint4;
-	private JTextField txtDefensepoint5;
-	private JTextField txtDefensepoint6;
-	private JTextField txtDefensepoint7;
-	private JTextField txtDefensepoint8;
-	private JTextField txtLifepoints1;
-	private JTextField txtLifepoints2;
-	private JTextField txtLifepoints3;
-	private JTextField txtLifepoints4;
-	private JTextField txtLifepoints5;
-	private JTextField txtLifepoints6;
-	private JTextField txtLifepoints7;
-	private JTextField txtLifepoints8;
-	private JTextField txtWounded1;
-	private JTextField txtWounded3;
-	private JTextField txtWounded2;
-	private JTextField txtWounded4;
-	private JTextField txtWounded5;
-	private JTextField txtWounded6;
-	private JTextField txtWounded7;
-	private JTextField txtDeadlywounded;
+			txtAge, txtName, txtFolk, txtJob, txtGold, txtSilver, txtCopper, txtSkillpoints,
+			//variablen verteidigungs punkte
+			txtDefensepoint1, txtDefensepoint2, txtDefensepoint3, txtDefensepoint4, txtDefensepoint5, txtDefensepoint6, txtDefensepoint7, txtDefensepoint8,
+			//Lebenspunkte variablen
+			txtLifepoints1, txtLifepoints2, txtLifepoints3, txtLifepoints4, txtLifepoints5, txtLifepoints6, txtLifepoints7, txtLifepoints8,
+			//Verwundet Variablen
+			txtWounded1, txtWounded3, txtWounded2, txtWounded4, txtWounded5, txtWounded6, txtWounded7, txtDeadlywounded
+			;
 	
+
 	
 
 	
@@ -268,149 +252,149 @@ public class Playermanager {
 		txtSkill18.setBounds(40, 827, 250, 27);
 		frame.getContentPane().add(txtSkill18);
 		
-		skillFw1 = new JTextField();
-		skillFw1.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw1.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw1.setText("99");
-		skillFw1.setBounds(313, 220, 30, 25);
-		frame.getContentPane().add(skillFw1);
-		skillFw1.setColumns(10);
+		txtskillFw1 = new JTextField();
+		txtskillFw1.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw1.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw1.setText("99");
+		txtskillFw1.setBounds(313, 220, 30, 25);
+		frame.getContentPane().add(txtskillFw1);
+		txtskillFw1.setColumns(10);
 		
-		skillFw2 = new JTextField();
-		skillFw2.setText("99");
-		skillFw2.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw2.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw2.setColumns(10);
-		skillFw2.setBounds(313, 255, 30, 25);
-		frame.getContentPane().add(skillFw2);
+		txtskillFw2 = new JTextField();
+		txtskillFw2.setText("99");
+		txtskillFw2.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw2.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw2.setColumns(10);
+		txtskillFw2.setBounds(313, 255, 30, 25);
+		frame.getContentPane().add(txtskillFw2);
 		
-		skillFw3 = new JTextField();
-		skillFw3.setText("99");
-		skillFw3.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw3.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw3.setColumns(10);
-		skillFw3.setBounds(313, 291, 30, 25);
-		frame.getContentPane().add(skillFw3);
+		txtskillFw3 = new JTextField();
+		txtskillFw3.setText("99");
+		txtskillFw3.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw3.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw3.setColumns(10);
+		txtskillFw3.setBounds(313, 291, 30, 25);
+		frame.getContentPane().add(txtskillFw3);
 		
-		skillFw4 = new JTextField();
-		skillFw4.setText("99");
-		skillFw4.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw4.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw4.setColumns(10);
-		skillFw4.setBounds(313, 326, 30, 25);
-		frame.getContentPane().add(skillFw4);
+		txtskillFw4 = new JTextField();
+		txtskillFw4.setText("99");
+		txtskillFw4.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw4.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw4.setColumns(10);
+		txtskillFw4.setBounds(313, 326, 30, 25);
+		frame.getContentPane().add(txtskillFw4);
 		
-		skillFw5 = new JTextField();
-		skillFw5.setText("99");
-		skillFw5.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw5.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw5.setColumns(10);
-		skillFw5.setBounds(313, 362, 30, 25);
-		frame.getContentPane().add(skillFw5);
+		txtskillFw5 = new JTextField();
+		txtskillFw5.setText("99");
+		txtskillFw5.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw5.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw5.setColumns(10);
+		txtskillFw5.setBounds(313, 362, 30, 25);
+		frame.getContentPane().add(txtskillFw5);
 		
-		skillFw6 = new JTextField();
-		skillFw6.setText("99");
-		skillFw6.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw6.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw6.setColumns(10);
-		skillFw6.setBounds(313, 397, 30, 25);
-		frame.getContentPane().add(skillFw6);
+		txtskillFw6 = new JTextField();
+		txtskillFw6.setText("99");
+		txtskillFw6.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw6.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw6.setColumns(10);
+		txtskillFw6.setBounds(313, 397, 30, 25);
+		frame.getContentPane().add(txtskillFw6);
 		
-		skillFw7 = new JTextField();
-		skillFw7.setText("99");
-		skillFw7.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw7.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw7.setColumns(10);
-		skillFw7.setBounds(312, 432, 30, 25);
-		frame.getContentPane().add(skillFw7);
+		txtskillFw7 = new JTextField();
+		txtskillFw7.setText("99");
+		txtskillFw7.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw7.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw7.setColumns(10);
+		txtskillFw7.setBounds(312, 432, 30, 25);
+		frame.getContentPane().add(txtskillFw7);
 		
-		skillFw8 = new JTextField();
-		skillFw8.setText("99");
-		skillFw8.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw8.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw8.setColumns(10);
-		skillFw8.setBounds(312, 468, 30, 25);
-		frame.getContentPane().add(skillFw8);
+		txtskillFw8 = new JTextField();
+		txtskillFw8.setText("99");
+		txtskillFw8.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw8.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw8.setColumns(10);
+		txtskillFw8.setBounds(312, 468, 30, 25);
+		frame.getContentPane().add(txtskillFw8);
 		
-		skillFw9 = new JTextField();
-		skillFw9.setText("99");
-		skillFw9.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw9.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw9.setColumns(10);
-		skillFw9.setBounds(312, 504, 30, 25);
-		frame.getContentPane().add(skillFw9);
+		txtskillFw9 = new JTextField();
+		txtskillFw9.setText("99");
+		txtskillFw9.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw9.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw9.setColumns(10);
+		txtskillFw9.setBounds(312, 504, 30, 25);
+		frame.getContentPane().add(txtskillFw9);
 		
-		skillFw10 = new JTextField();
-		skillFw10.setText("99");
-		skillFw10.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw10.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw10.setColumns(10);
-		skillFw10.setBounds(311, 539, 30, 25);
-		frame.getContentPane().add(skillFw10);
+		txtskillFw10 = new JTextField();
+		txtskillFw10.setText("99");
+		txtskillFw10.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw10.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw10.setColumns(10);
+		txtskillFw10.setBounds(311, 539, 30, 25);
+		frame.getContentPane().add(txtskillFw10);
 		
-		skillFw11 = new JTextField();
-		skillFw11.setText("99");
-		skillFw11.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw11.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw11.setColumns(10);
-		skillFw11.setBounds(310, 576, 30, 25);
-		frame.getContentPane().add(skillFw11);
+		txtskillFw11 = new JTextField();
+		txtskillFw11.setText("99");
+		txtskillFw11.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw11.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw11.setColumns(10);
+		txtskillFw11.setBounds(310, 576, 30, 25);
+		frame.getContentPane().add(txtskillFw11);
 		
-		skillFw12 = new JTextField();
-		skillFw12.setText("99");
-		skillFw12.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw12.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw12.setColumns(10);
-		skillFw12.setBounds(310, 612, 30, 25);
-		frame.getContentPane().add(skillFw12);
+		txtskillFw12 = new JTextField();
+		txtskillFw12.setText("99");
+		txtskillFw12.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw12.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw12.setColumns(10);
+		txtskillFw12.setBounds(310, 612, 30, 25);
+		frame.getContentPane().add(txtskillFw12);
 		
-		skillFw13 = new JTextField();
-		skillFw13.setText("99");
-		skillFw13.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw13.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw13.setColumns(10);
-		skillFw13.setBounds(310, 647, 30, 25);
-		frame.getContentPane().add(skillFw13);
+		txtskillFw13 = new JTextField();
+		txtskillFw13.setText("99");
+		txtskillFw13.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw13.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw13.setColumns(10);
+		txtskillFw13.setBounds(310, 647, 30, 25);
+		frame.getContentPane().add(txtskillFw13);
 		
-		skillFw14 = new JTextField();
-		skillFw14.setText("99");
-		skillFw14.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw14.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw14.setColumns(10);
-		skillFw14.setBounds(309, 683, 30, 25);
-		frame.getContentPane().add(skillFw14);
+		txtskillFw14 = new JTextField();
+		txtskillFw14.setText("99");
+		txtskillFw14.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw14.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw14.setColumns(10);
+		txtskillFw14.setBounds(309, 683, 30, 25);
+		frame.getContentPane().add(txtskillFw14);
 		
-		skillFw15 = new JTextField();
-		skillFw15.setText("99");
-		skillFw15.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw15.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw15.setColumns(10);
-		skillFw15.setBounds(309, 719, 30, 25);
-		frame.getContentPane().add(skillFw15);
+		txtskillFw15 = new JTextField();
+		txtskillFw15.setText("99");
+		txtskillFw15.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw15.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw15.setColumns(10);
+		txtskillFw15.setBounds(309, 719, 30, 25);
+		frame.getContentPane().add(txtskillFw15);
 		
-		skillFw16 = new JTextField();
-		skillFw16.setText("99");
-		skillFw16.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw16.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw16.setColumns(10);
-		skillFw16.setBounds(308, 756, 30, 25);
-		frame.getContentPane().add(skillFw16);
+		txtskillFw16 = new JTextField();
+		txtskillFw16.setText("99");
+		txtskillFw16.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw16.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw16.setColumns(10);
+		txtskillFw16.setBounds(308, 756, 30, 25);
+		frame.getContentPane().add(txtskillFw16);
 		
-		skillFw17 = new JTextField();
-		skillFw17.setText("99");
-		skillFw17.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw17.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw17.setColumns(10);
-		skillFw17.setBounds(307, 794, 30, 25);
-		frame.getContentPane().add(skillFw17);
+		txtskillFw17 = new JTextField();
+		txtskillFw17.setText("99");
+		txtskillFw17.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw17.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw17.setColumns(10);
+		txtskillFw17.setBounds(307, 794, 30, 25);
+		frame.getContentPane().add(txtskillFw17);
 		
-		skillFw18 = new JTextField();
-		skillFw18.setText("99");
-		skillFw18.setHorizontalAlignment(SwingConstants.CENTER);
-		skillFw18.setFont(new Font("Ubuntu", Font.BOLD, 17));
-		skillFw18.setColumns(10);
-		skillFw18.setBounds(307, 828, 30, 25);
-		frame.getContentPane().add(skillFw18);
+		txtskillFw18 = new JTextField();
+		txtskillFw18.setText("99");
+		txtskillFw18.setHorizontalAlignment(SwingConstants.CENTER);
+		txtskillFw18.setFont(new Font("Ubuntu", Font.BOLD, 17));
+		txtskillFw18.setColumns(10);
+		txtskillFw18.setBounds(307, 828, 30, 25);
+		frame.getContentPane().add(txtskillFw18);
 		
 		txtSkillpoints = new JTextField();
 		txtSkillpoints.setText("99");
@@ -424,37 +408,37 @@ public class Playermanager {
 		
 	}
 	public void weapon() {
-		txtweapon1 = new JTextField();
-		txtweapon1.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtweapon1.setHorizontalAlignment(SwingConstants.CENTER);
-		txtweapon1.setText("test");
-		txtweapon1.setBounds(380, 290, 185, 30);
-		frame.getContentPane().add(txtweapon1);
-		txtweapon1.setColumns(10);
+		txtWeapon1 = new JTextField();
+		txtWeapon1.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtWeapon1.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWeapon1.setText("test");
+		txtWeapon1.setBounds(380, 290, 185, 30);
+		frame.getContentPane().add(txtWeapon1);
+		txtWeapon1.setColumns(10);
 		
-		txtweapon2 = new JTextField();
-		txtweapon2.setText("test");
-		txtweapon2.setHorizontalAlignment(SwingConstants.CENTER);
-		txtweapon2.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtweapon2.setColumns(10);
-		txtweapon2.setBounds(380, 323, 185, 30);
-		frame.getContentPane().add(txtweapon2);
+		txtWeapon2 = new JTextField();
+		txtWeapon2.setText("test");
+		txtWeapon2.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWeapon2.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtWeapon2.setColumns(10);
+		txtWeapon2.setBounds(380, 323, 185, 30);
+		frame.getContentPane().add(txtWeapon2);
 		
-		txtweapon3 = new JTextField();
-		txtweapon3.setText("test");
-		txtweapon3.setHorizontalAlignment(SwingConstants.CENTER);
-		txtweapon3.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtweapon3.setColumns(10);
-		txtweapon3.setBounds(380, 359, 185, 30);
-		frame.getContentPane().add(txtweapon3);
+		txtWeapon3 = new JTextField();
+		txtWeapon3.setText("test");
+		txtWeapon3.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWeapon3.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtWeapon3.setColumns(10);
+		txtWeapon3.setBounds(380, 359, 185, 30);
+		frame.getContentPane().add(txtWeapon3);
 		
-		txtweapon4 = new JTextField();
-		txtweapon4.setText("test");
-		txtweapon4.setHorizontalAlignment(SwingConstants.CENTER);
-		txtweapon4.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtweapon4.setColumns(10);
-		txtweapon4.setBounds(380, 394, 185, 30);
-		frame.getContentPane().add(txtweapon4);
+		txtWeapon4 = new JTextField();
+		txtWeapon4.setText("test");
+		txtWeapon4.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWeapon4.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtWeapon4.setColumns(10);
+		txtWeapon4.setBounds(380, 394, 185, 30);
+		frame.getContentPane().add(txtWeapon4);
 		
 		txtWeapondamage1 = new JTextField();
 		txtWeapondamage1.setText("999");
@@ -598,6 +582,69 @@ public class Playermanager {
 		txtArmorpoint4.setBounds(625, 595, 42, 27);
 		frame.getContentPane().add(txtArmorpoint4);
 		
+		txtDefensepoint1 = new JTextField();
+		txtDefensepoint1.setText("999");
+		txtDefensepoint1.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint1.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtDefensepoint1.setColumns(10);
+		txtDefensepoint1.setBounds(393, 664, 42, 27);
+		frame.getContentPane().add(txtDefensepoint1);
+		
+		txtDefensepoint2 = new JTextField();
+		txtDefensepoint2.setText("999");
+		txtDefensepoint2.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint2.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint2.setColumns(10);
+		txtDefensepoint2.setBounds(470, 664, 30, 25);
+		frame.getContentPane().add(txtDefensepoint2);
+		
+		txtDefensepoint3 = new JTextField();
+		txtDefensepoint3.setText("999");
+		txtDefensepoint3.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint3.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint3.setColumns(10);
+		txtDefensepoint3.setBounds(519, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint3);
+		
+		txtDefensepoint4 = new JTextField();
+		txtDefensepoint4.setText("999");
+		txtDefensepoint4.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint4.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint4.setColumns(10);
+		txtDefensepoint4.setBounds(566, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint4);
+		
+		txtDefensepoint5 = new JTextField();
+		txtDefensepoint5.setText("999");
+		txtDefensepoint5.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint5.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint5.setColumns(10);
+		txtDefensepoint5.setBounds(614, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint5);
+		
+		txtDefensepoint6 = new JTextField();
+		txtDefensepoint6.setText("999");
+		txtDefensepoint6.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint6.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint6.setColumns(10);
+		txtDefensepoint6.setBounds(663, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint6);
+		
+		txtDefensepoint7 = new JTextField();
+		txtDefensepoint7.setText("999");
+		txtDefensepoint7.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint7.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint7.setColumns(10);
+		txtDefensepoint7.setBounds(712, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint7);
+		
+		txtDefensepoint8 = new JTextField();
+		txtDefensepoint8.setText("999");
+		txtDefensepoint8.setHorizontalAlignment(SwingConstants.CENTER);
+		txtDefensepoint8.setFont(new Font("Ubuntu", Font.BOLD, 12));
+		txtDefensepoint8.setColumns(10);
+		txtDefensepoint8.setBounds(761, 663, 30, 25);
+		frame.getContentPane().add(txtDefensepoint8);
 	}
 	public void specialSkill() {
 		
@@ -721,140 +768,6 @@ public class Playermanager {
 		txtMovement.setColumns(10);
 		txtMovement.setBounds(897, 196, 42, 27);
 		frame.getContentPane().add(txtMovement);
-	}
-	public void character(){
-		txtAge = new JTextField();
-		txtAge.setText("999");
-		txtAge.setHorizontalAlignment(SwingConstants.CENTER);
-		txtAge.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtAge.setColumns(10);
-		txtAge.setBounds(961, 99, 42, 27);
-		frame.getContentPane().add(txtAge);
-		
-		txtName = new JTextField();
-		txtName.setText("test");
-		txtName.setHorizontalAlignment(SwingConstants.CENTER);
-		txtName.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtName.setColumns(10);
-		txtName.setBounds(464, 56, 461, 27);
-		frame.getContentPane().add(txtName);
-		
-		txtFolk = new JTextField();
-		txtFolk.setText("test");
-		txtFolk.setHorizontalAlignment(SwingConstants.CENTER);
-		txtFolk.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtFolk.setColumns(10);
-		txtFolk.setBounds(427, 102, 148, 27);
-		frame.getContentPane().add(txtFolk);
-		
-		txtJob = new JTextField();
-		txtJob.setText("test");
-		txtJob.setHorizontalAlignment(SwingConstants.CENTER);
-		txtJob.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtJob.setColumns(10);
-		txtJob.setBounds(696, 102, 175, 27);
-		frame.getContentPane().add(txtJob);
-		
-		txtGold = new JTextField();
-		txtGold.setText("999");
-		txtGold.setHorizontalAlignment(SwingConstants.CENTER);
-		txtGold.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtGold.setColumns(10);
-		txtGold.setBounds(883, 675, 104, 27);
-		frame.getContentPane().add(txtGold);
-		
-		txtSilver = new JTextField();
-		txtSilver.setText("999");
-		txtSilver.setHorizontalAlignment(SwingConstants.CENTER);
-		txtSilver.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtSilver.setColumns(10);
-		txtSilver.setBounds(883, 760, 103, 27);
-		frame.getContentPane().add(txtSilver);
-		
-		txtCopper = new JTextField();
-		txtCopper.setText("999");
-		txtCopper.setHorizontalAlignment(SwingConstants.CENTER);
-		txtCopper.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtCopper.setColumns(10);
-		txtCopper.setBounds(883, 851, 106, 27);
-		frame.getContentPane().add(txtCopper);
-	}	
-	public void buttons() {
-		JButton btnSave = new JButton("Speichern");
-		btnSave.setBorder(UIManager.getBorder("CheckBox.border"));
-		btnSave.setMargin(new Insets(2, 34, 2, 14));
-		btnSave.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnSave.setIcon(new ImageIcon(Playermanager.class.getResource("/image/savebtn.png")));
-		btnSave.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		btnSave.setBounds(20, 11, 135, 47);
-		frame.getContentPane().add(btnSave);
-		
-		txtDefensepoint1 = new JTextField();
-		txtDefensepoint1.setText("999");
-		txtDefensepoint1.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint1.setFont(new Font("Ubuntu", Font.BOLD, 14));
-		txtDefensepoint1.setColumns(10);
-		txtDefensepoint1.setBounds(393, 664, 42, 27);
-		frame.getContentPane().add(txtDefensepoint1);
-		
-		txtDefensepoint2 = new JTextField();
-		txtDefensepoint2.setText("999");
-		txtDefensepoint2.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint2.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint2.setColumns(10);
-		txtDefensepoint2.setBounds(470, 664, 30, 25);
-		frame.getContentPane().add(txtDefensepoint2);
-		
-		txtDefensepoint3 = new JTextField();
-		txtDefensepoint3.setText("999");
-		txtDefensepoint3.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint3.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint3.setColumns(10);
-		txtDefensepoint3.setBounds(519, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint3);
-		
-		txtDefensepoint4 = new JTextField();
-		txtDefensepoint4.setText("999");
-		txtDefensepoint4.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint4.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint4.setColumns(10);
-		txtDefensepoint4.setBounds(566, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint4);
-		
-		txtDefensepoint5 = new JTextField();
-		txtDefensepoint5.setText("999");
-		txtDefensepoint5.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint5.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint5.setColumns(10);
-		txtDefensepoint5.setBounds(614, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint5);
-		
-		txtDefensepoint6 = new JTextField();
-		txtDefensepoint6.setText("999");
-		txtDefensepoint6.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint6.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint6.setColumns(10);
-		txtDefensepoint6.setBounds(663, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint6);
-		
-		txtDefensepoint7 = new JTextField();
-		txtDefensepoint7.setText("999");
-		txtDefensepoint7.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint7.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint7.setColumns(10);
-		txtDefensepoint7.setBounds(712, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint7);
-		
-		txtDefensepoint8 = new JTextField();
-		txtDefensepoint8.setText("999");
-		txtDefensepoint8.setHorizontalAlignment(SwingConstants.CENTER);
-		txtDefensepoint8.setFont(new Font("Ubuntu", Font.BOLD, 12));
-		txtDefensepoint8.setColumns(10);
-		txtDefensepoint8.setBounds(761, 663, 30, 25);
-		frame.getContentPane().add(txtDefensepoint8);
 		
 		txtLifepoints1 = new JTextField();
 		txtLifepoints1.setText("999");
@@ -983,13 +896,88 @@ public class Playermanager {
 		txtDeadlywounded.setColumns(10);
 		txtDeadlywounded.setBounds(614, 881, 30, 25);
 		frame.getContentPane().add(txtDeadlywounded);
+	}
+	public void character(){
+		txtAge = new JTextField();
+		txtAge.setText("999");
+		txtAge.setHorizontalAlignment(SwingConstants.CENTER);
+		txtAge.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtAge.setColumns(10);
+		txtAge.setBounds(961, 99, 42, 27);
+		frame.getContentPane().add(txtAge);
+		
+		txtName = new JTextField();
+		txtName.setText("test");
+		txtName.setHorizontalAlignment(SwingConstants.CENTER);
+		txtName.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtName.setColumns(10);
+		txtName.setBounds(464, 56, 461, 27);
+		frame.getContentPane().add(txtName);
+		
+		txtFolk = new JTextField();
+		txtFolk.setText("test");
+		txtFolk.setHorizontalAlignment(SwingConstants.CENTER);
+		txtFolk.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtFolk.setColumns(10);
+		txtFolk.setBounds(427, 102, 148, 27);
+		frame.getContentPane().add(txtFolk);
+		
+		txtJob = new JTextField();
+		txtJob.setText("test");
+		txtJob.setHorizontalAlignment(SwingConstants.CENTER);
+		txtJob.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtJob.setColumns(10);
+		txtJob.setBounds(696, 102, 175, 27);
+		frame.getContentPane().add(txtJob);
+		
+		txtGold = new JTextField();
+		txtGold.setText("999");
+		txtGold.setHorizontalAlignment(SwingConstants.CENTER);
+		txtGold.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtGold.setColumns(10);
+		txtGold.setBounds(883, 675, 104, 27);
+		frame.getContentPane().add(txtGold);
+		
+		txtSilver = new JTextField();
+		txtSilver.setText("999");
+		txtSilver.setHorizontalAlignment(SwingConstants.CENTER);
+		txtSilver.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtSilver.setColumns(10);
+		txtSilver.setBounds(883, 760, 103, 27);
+		frame.getContentPane().add(txtSilver);
+		
+		txtCopper = new JTextField();
+		txtCopper.setText("999");
+		txtCopper.setHorizontalAlignment(SwingConstants.CENTER);
+		txtCopper.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		txtCopper.setColumns(10);
+		txtCopper.setBounds(883, 851, 106, 27);
+		frame.getContentPane().add(txtCopper);
+	}	
+	public void buttons() {
+		JButton btnSave = new JButton("Speichern");
+		btnSave.setBorder(UIManager.getBorder("CheckBox.border"));
+		btnSave.setMargin(new Insets(2, 34, 2, 14));
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSave.setIcon(new ImageIcon(Playermanager.class.getResource("/image/savebtn.png")));
+		btnSave.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		btnSave.setBounds(20, 11, 135, 47);
+		frame.getContentPane().add(btnSave);
+		
+		
+		
+		
+		
+		
+	}
+	public void background() {
 		JLabel lblCharakterbogen = new JLabel("");
 		lblCharakterbogen.setFocusable(false);
 		lblCharakterbogen.setBounds(0, 0, 1376, 937);
 		lblCharakterbogen.setIcon(new ImageIcon(Playermanager.class.getResource("/image/charakter bogen.png")));
 		frame.getContentPane().add(lblCharakterbogen);
-		
-	}
-	public void background() {
 	}
 }

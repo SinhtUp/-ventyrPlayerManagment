@@ -16,17 +16,17 @@ public class vorrübergehnd {
 	//Rüstungswerte variablen
 	strArmorpoint1, strArmorpoint2, strArmorpoint3, strArmorpoint4,
 	//Spezialskills variablen
-	specialSkill1, specialSkill2, specialSkill3, specialSkill4, specialSkill5,
+	strSpecialskill1, strSpecialskill2, strSpecialskill3, strSpecialskill4, strSpecialskill5,
 	//Attribute variablen
-	attention, strength, knowledge, magic, initiative, movement,
+	strAttention, strStrength, strKnowledge, strMagic, strInitiative, strMovement,
 	//Leiden variablen
-	suffer1, suffer2, suffer3,
+	strSuffer1, strSuffer2, strSuffer3,
 	//Charackter information Variablen
-	age, name, folk, job, gold, silver, copper, skillpoints,
+	strAge, strName, strFolk, strJob, strGold, strSilver, strCopper, strSkillpoints,
 	//variablen verteidigungs punkte
-	defensePoint1, defensePoint2, defensePoint3, defensePoint4, defensePoint5, defensePoint6, defensePoint7, defensePoint8,
+	strDefensepoint1, strDefensepoint2, strDefensepoint3, strDefensepoint4, strDefensepoint5, strDefensepoint6, strDefensepoint7, strDefensepoint8,
 	//Lebenspunkte variablen
-	lifePoints1, lifePoints2, lifePoints3, lifePoints4, lifePoints5, lifePoints6, lifePoints7, lifePoints8,
+	strLifepoints1, strLifepoints2, strLifepoints3, strLifepoints4, strLifepoints5, strLifepoints6, strLifepoints7, strLifepoints8,
 	//Verwundet Variablen
-	wounded1, wounded3, wounded2, wounded4, wounded5, wounded6, wounded7, deadlyWounded;
+	strWounded1, strWounded3, strWounded2, strWounded4, strWounded5, strWounded6, strWounded7, strDeadlywounded;
 }

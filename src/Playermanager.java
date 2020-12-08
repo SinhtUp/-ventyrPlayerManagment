@@ -77,6 +77,11 @@ public class Playermanager {
 				}
 			}
 		});
+		//probe kann später gelöscht werden, nur zu überprüfung ob alle werte übergebn werden.
+		ProfilInstance pi = new ProfilInstance();
+		pi.instance();
+		System.out.println( pi.strSkill1 +" " + pi.skillFw1);
+	
 	}
 
 	/**
@@ -94,6 +99,9 @@ public class Playermanager {
 		attributes();
 		character();
 		buttons();
+		
+		
+		
 		
 	}
 

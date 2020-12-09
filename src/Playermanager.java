@@ -11,11 +11,15 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.awt.event.ActionEvent;
 
 import java.awt.Insets;
 import javax.swing.UIManager;
+
+
 
 
 
@@ -28,7 +32,8 @@ public class Playermanager {
 
 	public JTextPane 
 	txtInventory;
-	
+	public static ProfilInstance pi = new ProfilInstance();
+	static boolean reload = false;
 	//Textfeld Variablen
 	public JTextField 
 			//skillfelder variablen
@@ -83,10 +88,17 @@ public class Playermanager {
 			}
 		});
 		//probe kann später gelöscht werden, nur zu überprüfung ob alle werte übergebn werden.
-		ProfilInstance pi = new ProfilInstance();
-		pi.instance();
-		System.out.println( pi.strSkill1 +" " + pi.skillFw1);
-	
+		//ProfilInstance pi = new ProfilInstance();
+		//pi.instance();
+		//System.out.println( pi.strSkill1 +" " + pi.skillFw1);
+		
+		
+		while (reload == true) {
+			pi.instance();
+			
+			
+		}
+		
 	}
 
 	/**
@@ -975,8 +987,18 @@ public class Playermanager {
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				if (event.getSource() == btnSave) {
-					try{File profile = new File("Playerstats.csv");
+					
+					try{
+					reload = true;
+					File profile = new File("Playerstats.csv");
 					profile.delete();
+					FileOutputStream fos = new FileOutputStream(profile, true);
+					PrintWriter pw = new PrintWriter(fos);
+					
+					pw.println(pi.strSkill1 + "," + pi.skillFw1);
+					pw.flush();
+					pw.close();
+					
 					profile.createNewFile();
 					System.out.println(profile.exists());
 					}
@@ -984,6 +1006,9 @@ public class Playermanager {
 							e.printStackTrace();
 						}
 					}
+			
+			
+			
 			}
 		});
 		btnSave.setIcon(new ImageIcon(Playermanager.class.getResource("/image/savebtn.png")));

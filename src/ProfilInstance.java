@@ -1,8 +1,8 @@
 
 
-public class ProfilInstance {
-	Playermanager pm = new Playermanager();
-	String strSkill1, strSkill3, strSkill2, strSkill4, strSkill5, strSkill6, strSkill7, strSkill8, strSkill9,
+public class ProfilInstance extends Playermanager{
+	
+	public String strSkill1, strSkill3, strSkill2, strSkill4, strSkill5, strSkill6, strSkill7, strSkill8, strSkill9,
 	strSkill10, strSkill11, strSkill12, strSkill13, strSkill14, strSkill15, strSkill16, strSkill17, strSkill18,
 	//skillFertigkeitswurf variablen
 	strSkillfw1, strSkillfw2, strSkillfw3, strSkillfw4, strSkillfw5, strSkillfw6, strSkillfw7, strSkillfw8, strSkillfw9, strSkillfw10, strSkillfw11,
@@ -65,322 +65,7 @@ public class ProfilInstance {
 	//String variablen
 
 	
-	
-	
-	public void getSkill() {
-		strSkill1 = pm.txtSkill1.getText();
-		
-	
-		strSkill2 = pm.txtSkill2.getText();
-		
-		
-		strSkill3 = pm.txtSkill3.getText();
-		
-		
-		strSkill4 = pm.txtSkill4.getText();
-		
-		
-		strSkill5 = pm.txtSkill5.getText();
-		
-		
-		strSkill6 = pm.txtSkill6.getText();
 
-		
-		strSkill7 = pm.txtSkill7.getText();
-		
-		
-		strSkill8 = pm.txtSkill8.getText();
-		
-		
-		strSkill9 = pm.txtSkill9.getText();
-	
-		
-		strSkill10 = pm.txtSkill10.getText();
-		
-		
-		strSkill11 = pm.txtSkill11.getText();
-		
-		
-		strSkill12 = pm.txtSkill12.getText();
-		
-		
-		strSkill13 = pm.txtSkill13.getText();
-		
-		
-		strSkill14 = pm.txtSkill14.getText();
-		
-		
-		strSkill15 = pm.txtSkill15.getText();
-		
-		
-		strSkill16 = pm.txtSkill16.getText();
-		
-		
-		strSkill17 = pm.txtSkill17.getText();
-		
-		
-		strSkill18 = pm.txtSkill18.getText();
-		
-		
-		
-	}
-
-	public void getSkillfw() {
-		strSkillfw1 = pm.txtskillFw1.getText();
-		skillFw1=Integer.parseInt(strSkillfw1);
-		
-		strSkillfw2 = pm.txtskillFw2.getText();
-		skillFw2=Integer.parseInt(strSkillfw2);
-		
-		strSkillfw3 = pm.txtskillFw3.getText();
-		skillFw3=Integer.parseInt(strSkillfw3);
-		
-		strSkillfw4 = pm.txtskillFw4.getText();
-		skillFw4=Integer.parseInt(strSkillfw4);
-		
-		strSkillfw5 = pm.txtskillFw5.getText();
-		skillFw5=Integer.parseInt(strSkillfw5);
-		
-		strSkillfw6 = pm.txtskillFw6.getText();
-		skillFw6=Integer.parseInt(strSkillfw6);
-		
-		strSkillfw7 = pm.txtskillFw7.getText();
-		skillFw7=Integer.parseInt(strSkillfw7);
-		
-		strSkillfw8 = pm.txtskillFw8.getText();
-		skillFw8=Integer.parseInt(strSkillfw8);
-		
-		strSkillfw9 = pm.txtskillFw9.getText();
-		skillFw9=Integer.parseInt(strSkillfw9);
-		
-		strSkillfw10 = pm.txtskillFw10.getText();
-		skillFw10=Integer.parseInt(strSkillfw10);
-		
-		strSkillfw11 = pm.txtskillFw11.getText();
-		skillFw11=Integer.parseInt(strSkillfw11);
-		
-		strSkillfw12 = pm.txtskillFw12.getText();
-		skillFw12=Integer.parseInt(strSkillfw12);
-		
-		strSkillfw13 = pm.txtskillFw13.getText();
-		skillFw13=Integer.parseInt(strSkillfw13);
-		
-		strSkillfw14 = pm.txtskillFw14.getText();
-		skillFw14=Integer.parseInt(strSkillfw14);
-		
-		strSkillfw15 = pm.txtskillFw15.getText();
-		skillFw15=Integer.parseInt(strSkillfw15);
-		
-		strSkillfw16 = pm.txtskillFw16.getText();
-		skillFw16=Integer.parseInt(strSkillfw16);
-		
-		strSkillfw17 = pm.txtskillFw17.getText();
-		skillFw17=Integer.parseInt(strSkillfw17);
-		
-		strSkillfw18 = pm.txtskillFw1.getText();
-		skillFw18=Integer.parseInt(strSkillfw18);
-		
-		
-	}
-	
-	public void getWeapon() {
-		strWeapon1 = pm.txtWeapon1.getText();
-		strWeapon2 = pm.txtWeapon2.getText();
-		strWeapon3 = pm.txtWeapon3.getText();
-		strWeapon4 = pm.txtWeapon4.getText();
-		
-		
-	}
-	
-	public void getWeaponfw() {
-		strWeaponfw1 = pm.txtWeaponFw1.getText();
-		weaponFw1=Integer.parseInt(strWeaponfw1);
-		
-		strWeaponfw2 = pm.txtWeaponFw2.getText();
-		weaponFw2=Integer.parseInt(strWeaponfw2);
-		
-		strWeaponfw3 = pm.txtWeaponFw3.getText();
-		weaponFw3=Integer.parseInt(strWeaponfw3);
-		
-		strWeaponfw4 = pm.txtWeaponFw4.getText();
-		weaponFw4=Integer.parseInt(strWeaponfw4);
-		
-	}
-
-	public void getWeapondamage() {
-		strWeapondamage1 = pm.txtWeapondamage1.getText();
-		weaponDamage1=Integer.parseInt(strWeapondamage1);
-		
-		strWeapondamage2 = pm.txtWeapondamage2.getText();
-		weaponDamage2=Integer.parseInt(strWeapondamage2);
-		
-		strWeapondamage3 = pm.txtWeapondamage3.getText();
-		weaponDamage3=Integer.parseInt(strWeapondamage3);
-		
-		strWeapondamage4 = pm.txtWeapondamage4.getText();
-		weaponDamage4=Integer.parseInt(strWeapondamage4);
-		
-		
-	}
-
-	public void getArmor() {
-		strArmor1 = pm.txtArmor1.getText();
-		
-		strArmor2 = pm.txtArmor2.getText();
-		
-		strArmor3 = pm.txtArmor3.getText();
-		
-		strArmor4 = pm.txtArmor4.getText();
-	}
-	
-	public void getArmorpoint() {
-		strArmorpoint1 = pm.txtArmorpoint1.getText();
-		armorPoint1=Integer.parseInt(strArmorpoint1);
-		
-		strArmorpoint2 = pm.txtArmorpoint2.getText();
-		armorPoint2=Integer.parseInt(strArmorpoint2);
-		
-		strArmorpoint3 = pm.txtArmorpoint3.getText();
-		armorPoint3=Integer.parseInt(strArmorpoint3);
-		
-		strArmorpoint4 = pm.txtArmorpoint4.getText();
-		armorPoint4=Integer.parseInt(strArmorpoint4);
-	}
-
-	public void getSpecialskill() {
-		
-		strSpecialskill1 = pm.txtSpecialskill1.getText();
-		strSpecialskill2 = pm.txtSpecialskill2.getText();
-		strSpecialskill3 = pm.txtSpecialskill3.getText();
-		strSpecialskill4 = pm.txtSpecialskill4.getText();
-	}
-
-	public void getAttribute() {
-		
-		strAttention = pm.txtAttention.getText();
-		attention =Integer.parseInt(strAttention);
-
-		strStrength = pm.txtStrength.getText();
-		strength=Integer.parseInt(strStrength);
-		
-		strKnowledge = pm.txtKnowledge.getText();
-		knowledge=Integer.parseInt(strKnowledge);
-		
-		strMagic = pm.txtMagic.getText();
-		magic=Integer.parseInt(strMagic);
-		
-		strInitiative = pm.txtInitiative.getText();
-		initiative=Integer.parseInt(strInitiative);
-		
-		strMovement = pm.txtMovement.getText();
-		movement=Integer.parseInt(strMovement);
-		
-	}
-
-	public void getSuffer() {
-		
-		strSuffer1 = pm.txtSuffer1.getText();
-		strSuffer2 = pm.txtSuffer2.getText();
-		strSuffer3 = pm.txtSuffer3.getText();
-	}
-
-	public void getCharcterinfo() {
-		
-		strName = pm.txtName.getText();
-		
-		strFolk = pm.txtFolk.getText();
-		
-		strJob = pm.txtJob.getText();
-		
-		strAge = pm.txtAge.getText();
-		age = Integer.parseInt(strAge);
-		
-		strGold = pm.txtGold.getText();
-		gold = Integer.parseInt(strGold);
-		
-		strSilver = pm.txtSilver.getText();
-		silver = Integer.parseInt(strSilver);
-		
-		strCopper = pm.txtCopper.getText();
-		copper = Integer.parseInt(strCopper);
-		
-		strSkillpoints = pm.txtSkillpoints.getText();
-		skillpoints = Integer.parseInt(strSkillpoints);
-		
-		}
-
-	public void getDefensepoint() {
-		
-		strDefensepoint1 = pm.txtDefensepoint1.getText();
-		defensePoint1 = Integer.parseInt(strDefensepoint1);
-		
-		strDefensepoint2 = pm.txtDefensepoint2.getText();
-		defensePoint2 = Integer.parseInt(strDefensepoint2);
-		
-		strDefensepoint3 = pm.txtDefensepoint3.getText();
-		defensePoint3 = Integer.parseInt(strDefensepoint3);
-		
-		strDefensepoint4 = pm.txtDefensepoint4.getText();
-		defensePoint4 = Integer.parseInt(strDefensepoint4);
-		
-	}
-
-	public void getLifepoints() {
-		
-		strLifepoints1 = pm.txtLifepoints1.getText();
-		lifePoints1 = Integer.parseInt(strLifepoints1);
-
-		strLifepoints2 = pm.txtLifepoints2.getText();
-		lifePoints2 = Integer.parseInt(strLifepoints2);
-		
-		strLifepoints3 = pm.txtLifepoints3.getText();
-		lifePoints3 = Integer.parseInt(strLifepoints3);
-		
-		strLifepoints4 = pm.txtLifepoints4.getText();
-		lifePoints4 = Integer.parseInt(strLifepoints4);
-		
-		strLifepoints5 = pm.txtLifepoints5.getText();
-		lifePoints5 = Integer.parseInt(strLifepoints5);
-		
-		strLifepoints6 = pm.txtLifepoints6.getText();
-		lifePoints6 = Integer.parseInt(strLifepoints6);
-		
-		strLifepoints7 = pm.txtLifepoints7.getText();
-		lifePoints7 = Integer.parseInt(strLifepoints7);
-
-		strLifepoints8 = pm.txtLifepoints8.getText();
-		lifePoints8 = Integer.parseInt(strLifepoints8);
-		
-		
-	}
-
-	public void getWounded() {
-		strWounded1 = pm.txtWounded1.getText();
-		wounded1 = Integer.parseInt(strWounded1);
-		
-		strWounded2 = pm.txtWounded2.getText();
-		wounded2 = Integer.parseInt(strWounded2);
-		
-		strWounded3 = pm.txtWounded3.getText();
-		wounded3 = Integer.parseInt(strWounded3);
-		
-		strWounded4 = pm.txtWounded4.getText();
-		wounded4 = Integer.parseInt(strWounded4);
-		
-		strWounded5 = pm.txtWounded5.getText();
-		wounded5 = Integer.parseInt(strWounded5);
-		
-		strWounded6 = pm.txtWounded6.getText();
-		wounded6 = Integer.parseInt(strWounded6);
-		
-		strWounded7 = pm.txtWounded7.getText();
-		wounded7 = Integer.parseInt(strWounded7);
-		
-		strDeadlywounded = pm.txtDeadlywounded.getText();
-		deadlyWounded = Integer.parseInt(strDeadlywounded);
-	}
-	
-	
 	public void instance() {
 		
 		getSkill();
@@ -399,6 +84,321 @@ public class ProfilInstance {
 		getWounded();
 		
 	}
+	
+	public void getSkill() {
+		strSkill1 = txtSkill1.getText();
+		
+	
+		strSkill2 = txtSkill2.getText();
+		
+		
+		strSkill3 = txtSkill3.getText();
+		
+		
+		strSkill4 = txtSkill4.getText();
+		
+		
+		strSkill5 = txtSkill5.getText();
+		
+		
+		strSkill6 = txtSkill6.getText();
+
+		
+		strSkill7 = txtSkill7.getText();
+		
+		
+		strSkill8 = txtSkill8.getText();
+		
+		
+		strSkill9 = txtSkill9.getText();
+	
+		
+		strSkill10 = txtSkill10.getText();
+		
+		
+		strSkill11 = txtSkill11.getText();
+		
+		
+		strSkill12 = txtSkill12.getText();
+		
+		
+		strSkill13 = txtSkill13.getText();
+		
+		
+		strSkill14 = txtSkill14.getText();
+		
+		
+		strSkill15 = txtSkill15.getText();
+		
+		
+		strSkill16 = txtSkill16.getText();
+		
+		
+		strSkill17 = txtSkill17.getText();
+		
+		
+		strSkill18 = txtSkill18.getText();
+		
+		
+		
+	}
+
+	public void getSkillfw() {
+		strSkillfw1 = txtskillFw1.getText();
+		skillFw1=Integer.parseInt(strSkillfw1);
+		
+		strSkillfw2 = txtskillFw2.getText();
+		skillFw2=Integer.parseInt(strSkillfw2);
+		
+		strSkillfw3 = txtskillFw3.getText();
+		skillFw3=Integer.parseInt(strSkillfw3);
+		
+		strSkillfw4 = txtskillFw4.getText();
+		skillFw4=Integer.parseInt(strSkillfw4);
+		
+		strSkillfw5 = txtskillFw5.getText();
+		skillFw5=Integer.parseInt(strSkillfw5);
+		
+		strSkillfw6 = txtskillFw6.getText();
+		skillFw6=Integer.parseInt(strSkillfw6);
+		
+		strSkillfw7 = txtskillFw7.getText();
+		skillFw7=Integer.parseInt(strSkillfw7);
+		
+		strSkillfw8 = txtskillFw8.getText();
+		skillFw8=Integer.parseInt(strSkillfw8);
+		
+		strSkillfw9 = txtskillFw9.getText();
+		skillFw9=Integer.parseInt(strSkillfw9);
+		
+		strSkillfw10 = txtskillFw10.getText();
+		skillFw10=Integer.parseInt(strSkillfw10);
+		
+		strSkillfw11 = txtskillFw11.getText();
+		skillFw11=Integer.parseInt(strSkillfw11);
+		
+		strSkillfw12 = txtskillFw12.getText();
+		skillFw12=Integer.parseInt(strSkillfw12);
+		
+		strSkillfw13 = txtskillFw13.getText();
+		skillFw13=Integer.parseInt(strSkillfw13);
+		
+		strSkillfw14 = txtskillFw14.getText();
+		skillFw14=Integer.parseInt(strSkillfw14);
+		
+		strSkillfw15 = txtskillFw15.getText();
+		skillFw15=Integer.parseInt(strSkillfw15);
+		
+		strSkillfw16 = txtskillFw16.getText();
+		skillFw16=Integer.parseInt(strSkillfw16);
+		
+		strSkillfw17 = txtskillFw17.getText();
+		skillFw17=Integer.parseInt(strSkillfw17);
+		
+		strSkillfw18 = txtskillFw1.getText();
+		skillFw18=Integer.parseInt(strSkillfw18);
+		
+		
+	}
+	
+	public void getWeapon() {
+		strWeapon1 = txtWeapon1.getText();
+		strWeapon2 = txtWeapon2.getText();
+		strWeapon3 = txtWeapon3.getText();
+		strWeapon4 = txtWeapon4.getText();
+		
+		
+	}
+	
+	public void getWeaponfw() {
+		strWeaponfw1 = txtWeaponFw1.getText();
+		weaponFw1=Integer.parseInt(strWeaponfw1);
+		
+		strWeaponfw2 = txtWeaponFw2.getText();
+		weaponFw2=Integer.parseInt(strWeaponfw2);
+		
+		strWeaponfw3 = txtWeaponFw3.getText();
+		weaponFw3=Integer.parseInt(strWeaponfw3);
+		
+		strWeaponfw4 = txtWeaponFw4.getText();
+		weaponFw4=Integer.parseInt(strWeaponfw4);
+		
+	}
+
+	public void getWeapondamage() {
+		strWeapondamage1 = txtWeapondamage1.getText();
+		weaponDamage1=Integer.parseInt(strWeapondamage1);
+		
+		strWeapondamage2 = txtWeapondamage2.getText();
+		weaponDamage2=Integer.parseInt(strWeapondamage2);
+		
+		strWeapondamage3 = txtWeapondamage3.getText();
+		weaponDamage3=Integer.parseInt(strWeapondamage3);
+		
+		strWeapondamage4 = txtWeapondamage4.getText();
+		weaponDamage4=Integer.parseInt(strWeapondamage4);
+		
+		
+	}
+
+	public void getArmor() {
+		strArmor1 = txtArmor1.getText();
+		
+		strArmor2 = txtArmor2.getText();
+		
+		strArmor3 = txtArmor3.getText();
+		
+		strArmor4 = txtArmor4.getText();
+	}
+	
+	public void getArmorpoint() {
+		strArmorpoint1 = txtArmorpoint1.getText();
+		armorPoint1=Integer.parseInt(strArmorpoint1);
+		
+		strArmorpoint2 = txtArmorpoint2.getText();
+		armorPoint2=Integer.parseInt(strArmorpoint2);
+		
+		strArmorpoint3 = txtArmorpoint3.getText();
+		armorPoint3=Integer.parseInt(strArmorpoint3);
+		
+		strArmorpoint4 = txtArmorpoint4.getText();
+		armorPoint4=Integer.parseInt(strArmorpoint4);
+	}
+
+	public void getSpecialskill() {
+		
+		strSpecialskill1 = txtSpecialskill1.getText();
+		strSpecialskill2 = txtSpecialskill2.getText();
+		strSpecialskill3 = txtSpecialskill3.getText();
+		strSpecialskill4 = txtSpecialskill4.getText();
+	}
+
+	public void getAttribute() {
+		
+		strAttention = txtAttention.getText();
+		attention =Integer.parseInt(strAttention);
+
+		strStrength = txtStrength.getText();
+		strength=Integer.parseInt(strStrength);
+		
+		strKnowledge = txtKnowledge.getText();
+		knowledge=Integer.parseInt(strKnowledge);
+		
+		strMagic = txtMagic.getText();
+		magic=Integer.parseInt(strMagic);
+		
+		strInitiative = txtInitiative.getText();
+		initiative=Integer.parseInt(strInitiative);
+		
+		strMovement = txtMovement.getText();
+		movement=Integer.parseInt(strMovement);
+		
+	}
+
+	public void getSuffer() {
+		
+		strSuffer1 = txtSuffer1.getText();
+		strSuffer2 = txtSuffer2.getText();
+		strSuffer3 = txtSuffer3.getText();
+	}
+
+	public void getCharcterinfo() {
+		
+		strName = txtName.getText();
+		
+		strFolk = txtFolk.getText();
+		
+		strJob = txtJob.getText();
+		
+		strAge = txtAge.getText();
+		age = Integer.parseInt(strAge);
+		
+		strGold = txtGold.getText();
+		gold = Integer.parseInt(strGold);
+		
+		strSilver = txtSilver.getText();
+		silver = Integer.parseInt(strSilver);
+		
+		strCopper = txtCopper.getText();
+		copper = Integer.parseInt(strCopper);
+		
+		strSkillpoints = txtSkillpoints.getText();
+		skillpoints = Integer.parseInt(strSkillpoints);
+		
+		}
+
+	public void getDefensepoint() {
+		
+		strDefensepoint1 = txtDefensepoint1.getText();
+		defensePoint1 = Integer.parseInt(strDefensepoint1);
+		
+		strDefensepoint2 = txtDefensepoint2.getText();
+		defensePoint2 = Integer.parseInt(strDefensepoint2);
+		
+		strDefensepoint3 = txtDefensepoint3.getText();
+		defensePoint3 = Integer.parseInt(strDefensepoint3);
+		
+		strDefensepoint4 = txtDefensepoint4.getText();
+		defensePoint4 = Integer.parseInt(strDefensepoint4);
+		
+	}
+
+	public void getLifepoints() {
+		
+		strLifepoints1 = txtLifepoints1.getText();
+		lifePoints1 = Integer.parseInt(strLifepoints1);
+
+		strLifepoints2 = txtLifepoints2.getText();
+		lifePoints2 = Integer.parseInt(strLifepoints2);
+		
+		strLifepoints3 = txtLifepoints3.getText();
+		lifePoints3 = Integer.parseInt(strLifepoints3);
+		
+		strLifepoints4 = txtLifepoints4.getText();
+		lifePoints4 = Integer.parseInt(strLifepoints4);
+		
+		strLifepoints5 = txtLifepoints5.getText();
+		lifePoints5 = Integer.parseInt(strLifepoints5);
+		
+		strLifepoints6 = txtLifepoints6.getText();
+		lifePoints6 = Integer.parseInt(strLifepoints6);
+		
+		strLifepoints7 = txtLifepoints7.getText();
+		lifePoints7 = Integer.parseInt(strLifepoints7);
+
+		strLifepoints8 = txtLifepoints8.getText();
+		lifePoints8 = Integer.parseInt(strLifepoints8);
+		
+		
+	}
+
+	public void getWounded() {
+		strWounded1 = txtWounded1.getText();
+		wounded1 = Integer.parseInt(strWounded1);
+		
+		strWounded2 = txtWounded2.getText();
+		wounded2 = Integer.parseInt(strWounded2);
+		
+		strWounded3 = txtWounded3.getText();
+		wounded3 = Integer.parseInt(strWounded3);
+		
+		strWounded4 = txtWounded4.getText();
+		wounded4 = Integer.parseInt(strWounded4);
+		
+		strWounded5 = txtWounded5.getText();
+		wounded5 = Integer.parseInt(strWounded5);
+		
+		strWounded6 = txtWounded6.getText();
+		wounded6 = Integer.parseInt(strWounded6);
+		
+		strWounded7 = txtWounded7.getText();
+		wounded7 = Integer.parseInt(strWounded7);
+		
+		strDeadlywounded = txtDeadlywounded.getText();
+		deadlyWounded = Integer.parseInt(strDeadlywounded);
+	}
+	
+	
 	
 	
 	

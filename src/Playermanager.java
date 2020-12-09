@@ -10,14 +10,19 @@ import javax.swing.JTextPane;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 import java.awt.Insets;
 import javax.swing.UIManager;
 
 
-public class Playermanager {
 
+
+
+public class Playermanager {
+	
 	public JFrame 
 	frame;
 
@@ -963,11 +968,22 @@ public class Playermanager {
 		frame.getContentPane().add(txtCopper);
 	}	
 	public void buttons() {
+		
 		JButton btnSave = new JButton("Speichern");
 		btnSave.setBorder(UIManager.getBorder("CheckBox.border"));
 		btnSave.setMargin(new Insets(2, 34, 2, 14));
 		btnSave.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent event) {
+				if (event.getSource() == btnSave) {
+					try{File profile = new File("Playerstats.csv");
+					profile.delete();
+					profile.createNewFile();
+					System.out.println(profile.exists());
+					}
+						catch (IOException e){
+							e.printStackTrace();
+						}
+					}
 			}
 		});
 		btnSave.setIcon(new ImageIcon(Playermanager.class.getResource("/image/savebtn.png")));

@@ -18,6 +18,9 @@ import java.awt.event.ActionEvent;
 
 import java.awt.Insets;
 import javax.swing.UIManager;
+import java.awt.Dimension;
+
+
 
 
 
@@ -32,8 +35,8 @@ public class Playermanager {
 
 	public JTextPane 
 	txtInventory;
-	public static ProfilInstance pi = new ProfilInstance();
-	static boolean reload = false;
+	
+	
 	//Textfeld Variablen
 	public JTextField 
 			//skillfelder variablen
@@ -68,7 +71,8 @@ public class Playermanager {
 			txtWounded1, txtWounded3, txtWounded2, txtWounded4, txtWounded5, txtWounded6, txtWounded7, txtDeadlywounded
 			;
 	
-
+	public String empty = "";
+	private JButton btnLoad;
 	
 
 	
@@ -91,13 +95,9 @@ public class Playermanager {
 		//ProfilInstance pi = new ProfilInstance();
 		//pi.instance();
 		//System.out.println( pi.strSkill1 +" " + pi.skillFw1);
+			
 		
 		
-		while (reload == true) {
-			pi.instance();
-			
-			
-		}
 		
 	}
 
@@ -986,16 +986,38 @@ public class Playermanager {
 		btnSave.setMargin(new Insets(2, 34, 2, 14));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
+				
 				if (event.getSource() == btnSave) {
 					
+					
+					
+					//speicher code für die Skill und SkillFW felder (1)
 					try{
-					reload = true;
-					File profile = new File("Playerstats.csv");
+					
+					File profile = new File("Playerskill.csv");
 					profile.delete();
 					FileOutputStream fos = new FileOutputStream(profile, true);
 					PrintWriter pw = new PrintWriter(fos);
 					
-					pw.println(pi.strSkill1 + "," + pi.skillFw1);
+					pw.println("Skill" + "," + "SkillFw");
+					pw.println(txtSkill1.getText() + "," + txtskillFw1.getText());
+					pw.println(txtSkill2.getText() + "," + txtskillFw2.getText());
+					pw.println(txtSkill3.getText() + "," + txtskillFw3.getText());
+					pw.println(txtSkill4.getText() + "," + txtskillFw4.getText());
+					pw.println(txtSkill5.getText() + "," + txtskillFw5.getText());
+					pw.println(txtSkill6.getText() + "," + txtskillFw6.getText());
+					pw.println(txtSkill7.getText() + "," + txtskillFw7.getText());
+					pw.println(txtSkill8.getText() + "," + txtskillFw8.getText());
+					pw.println(txtSkill9.getText() + "," + txtskillFw9.getText());
+					pw.println(txtSkill10.getText() + "," + txtskillFw10.getText());
+					pw.println(txtSkill11.getText() + "," + txtskillFw11.getText());
+					pw.println(txtSkill12.getText() + "," + txtskillFw12.getText());
+					pw.println(txtSkill13.getText() + "," + txtskillFw13.getText());
+					pw.println(txtSkill14.getText() + "," + txtskillFw14.getText());
+					pw.println(txtSkill15.getText() + "," + txtskillFw15.getText());
+					pw.println(txtSkill16.getText() + "," + txtskillFw16.getText());
+					pw.println(txtSkill17.getText() + "," + txtskillFw17.getText());
+					pw.println(txtSkill18.getText() + "," + txtskillFw18.getText());
 					pw.flush();
 					pw.close();
 					
@@ -1004,8 +1026,274 @@ public class Playermanager {
 					}
 						catch (IOException e){
 							e.printStackTrace();
+						}//(1ende)
+					
+					//Speichercode für waffen und waffen Damage so wie fertigkeitswürfe für waffen (2)
+					try{
+						
+						File profile = new File("Playerweapon.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Weapon" + "," + "Damage" + "," + "DamageFw");
+						pw.println(txtWeapon1.getText() + "," + txtWeapondamage1.getText() + "," + txtWeaponFw1.getText());
+						pw.println(txtWeapon2.getText() + "," + txtWeapondamage2.getText() + "," + txtWeaponFw2.getText());
+						pw.println(txtWeapon3.getText() + "," + txtWeapondamage3.getText() + "," + txtWeaponFw3.getText());
+						pw.println(txtWeapon4.getText() + "," + txtWeapondamage4.getText() + "," + txtWeaponFw4.getText());
+						
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
 						}
-					}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(2ende)
+					
+					//Speichercode für Rüstungenund Schutz felder (3)
+					try{
+						
+						File profile = new File("Playerarmor.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Armor" + "," + "Defensepoints" );
+						pw.println(txtArmor1.getText() + "," + txtArmorpoint1.getText());
+						pw.println(txtArmor2.getText() + "," + txtArmorpoint2.getText());
+						pw.println(txtArmor3.getText() + "," + txtArmorpoint3.getText());
+						pw.println(txtArmor4.getText() + "," + txtArmorpoint4.getText());
+						
+					
+						
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(3ende)
+				
+					
+					//Speichercode für Spezialskillfelder (4)
+					try{
+						
+						File profile = new File("Playerspezialskill.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Spezialskill" );
+						pw.println(txtSpecialskill1.getText());
+						pw.println(txtSpecialskill2.getText());
+						pw.println(txtSpecialskill3.getText());
+						pw.println(txtSpecialskill4.getText());
+						pw.println(txtSpecialskill5.getText());
+						
+						
+					
+						
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(4ende)
+					
+					
+					//Speichercode für Spezialskillfelder (5)
+					try{
+						
+						File profile = new File("Playersuffer.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Suffering" );
+						pw.println(txtSuffer1.getText());
+						pw.println(txtSuffer2.getText());
+						pw.println(txtSuffer3.getText());
+						
+						
+						
+					
+						
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(5ende)
+					
+					//Speichercode für Spielerattribute (6)
+					try{
+						
+						File profile = new File("Playerattributes.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Attention" + "," + "Strength" + "," + "Knowledge" + "," + "Magic" + "," + "Intitiative" + "," + "Movement" + "," + "Skillpoints");
+						pw.println(txtAttention.getText() + "," + txtStrength.getText() + "," + txtKnowledge.getText() + "," + txtMagic.getText() + "," + txtInitiative.getText() + "," + txtMovement.getText() + "," + txtSkillpoints.getText());
+						
+						
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(6ende)
+					
+					//Speichercode für Spieler Rüstungspunkte (7)
+					try{
+						
+						File profile = new File("Playerdefensepoints.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Playerdefensepoints" );
+						pw.println(txtDefensepoint1.getText());
+						pw.println(txtDefensepoint2.getText());
+						pw.println(txtDefensepoint3.getText());
+						pw.println(txtDefensepoint4.getText());
+						pw.println(txtDefensepoint5.getText());
+						pw.println(txtDefensepoint6.getText());
+						pw.println(txtDefensepoint7.getText());
+						pw.println(txtDefensepoint8.getText());
+											
+												
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(7ende)
+					
+					
+					//Speichercode für Spieler Lebenspunkte (8)
+					try{
+						
+						File profile = new File("Playerlifepoints.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Playerlifepoints" );
+						pw.println(txtLifepoints1.getText());
+						pw.println(txtLifepoints2.getText());
+						pw.println(txtLifepoints3.getText());
+						pw.println(txtLifepoints4.getText());
+						pw.println(txtLifepoints5.getText());
+						pw.println(txtLifepoints6.getText());
+						pw.println(txtLifepoints7.getText());
+						pw.println(txtLifepoints8.getText());
+						
+						
+											
+												
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(8ende)
+					
+					//Speichercode für Spieler Verwundetpunkte (9)
+					try{
+						
+						File profile = new File("Playerwounded.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Playerwounded points" );
+						pw.println(txtWounded1.getText());
+						pw.println(txtWounded2.getText());
+						pw.println(txtWounded3.getText());
+						pw.println(txtWounded4.getText());
+						pw.println(txtWounded5.getText());
+						pw.println(txtWounded6.getText());
+						pw.println(txtWounded7.getText());
+						
+												
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(9ende)
+					
+					//Speichercode für Spieler Tötlichverwundetpunkte (10)
+					try{
+						
+						File profile = new File("Playerdeadlywounded.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Playerdeadlywounded points");
+						pw.println(txtDeadlywounded.getText());
+						
+						
+												
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(10ende)
+					
+					//Speichercode für Spieler informationen wie herkunft, name etc. (11)
+					try{
+						
+						File profile = new File("Playerinformation.csv");
+						profile.delete();
+						FileOutputStream fos = new FileOutputStream(profile, true);
+						PrintWriter pw = new PrintWriter(fos);
+						
+						pw.println("Name" + "," + "Folk" + "," + "Job" + "," + "Age" + "," + "Copper" + "," + "Silver" + "," + "Gold");
+						pw.println(txtName.getText() + "," + txtFolk.getText() + "," + txtJob.getText() + "," + txtAge.getText() + "," + txtCopper.getText() + "," + txtSilver.getText() + "," + txtGold.getText());
+						
+												
+						pw.flush();
+						pw.close();
+						
+						profile.createNewFile();
+						System.out.println(profile.exists());
+						}
+							catch (IOException e){
+								e.printStackTrace();
+							}//(11ende)
+				
+				
+				}
+				
 			
 			
 			
@@ -1016,6 +1304,26 @@ public class Playermanager {
 		btnSave.setBounds(20, 11, 135, 47);
 		frame.getContentPane().add(btnSave);
 		
+		btnLoad = new JButton("Laden");
+		btnLoad.setPreferredSize(new Dimension(79, 23));
+		btnLoad.setMinimumSize(new Dimension(79, 23));
+		btnLoad.setMaximumSize(new Dimension(79, 23));
+		btnLoad.setIcon(new ImageIcon(Playermanager.class.getResource("/image/loadbtn.png")));
+		btnLoad.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnLoad.setMargin(new Insets(2, 34, 2, 14));
+		btnLoad.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		btnLoad.setBorder(UIManager.getBorder("DesktopIcon.border"));
+		btnLoad.setBounds(195, 11, 140, 47);
+		frame.getContentPane().add(btnLoad);
+		JLabel lblCharakterbogen = new JLabel("");
+		lblCharakterbogen.setFocusable(false);
+		lblCharakterbogen.setBounds(0, 0, 1376, 937);
+		lblCharakterbogen.setIcon(new ImageIcon(Playermanager.class.getResource("/image/charakter bogen.png")));
+		frame.getContentPane().add(lblCharakterbogen);
+		
 		
 		
 		
@@ -1023,10 +1331,5 @@ public class Playermanager {
 		
 	}
 	public void background() {
-		JLabel lblCharakterbogen = new JLabel("");
-		lblCharakterbogen.setFocusable(false);
-		lblCharakterbogen.setBounds(0, 0, 1376, 937);
-		lblCharakterbogen.setIcon(new ImageIcon(Playermanager.class.getResource("/image/charakter bogen.png")));
-		frame.getContentPane().add(lblCharakterbogen);
 	}
 }

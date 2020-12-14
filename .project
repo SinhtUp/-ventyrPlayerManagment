@@ -26,6 +26,11 @@
 			<location>C:/Users/Sinht/git/-ventyrPlayerManagment/bilder/charakter bogen.png</location>
 		</link>
 		<link>
+			<name>src/image/loadbtn.png</name>
+			<type>1</type>
+			<location>C:/Users/Sinht/git/-ventyrPlayerManagment/bilder/loadbtn.png</location>
+		</link>
+		<link>
 			<name>src/image/savebtn.png</name>
 			<type>1</type>
 			<location>C:/Users/Sinht/git/-ventyrPlayerManagment/bilder/savebtn.png</location>

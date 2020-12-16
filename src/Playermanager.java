@@ -10,14 +10,20 @@ import javax.swing.JTextPane;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+
 import java.io.File;
+
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import java.awt.event.ActionEvent;
 
 import java.awt.Insets;
 import javax.swing.UIManager;
+
 import java.awt.Dimension;
 
 
@@ -73,6 +79,7 @@ public class Playermanager {
 	
 	public String empty = "";
 	private JButton btnLoad;
+	private JButton btnReset;
 	
 
 	
@@ -984,7 +991,8 @@ public class Playermanager {
 		JButton btnSave = new JButton("Speichern");
 		btnSave.setBorder(UIManager.getBorder("CheckBox.border"));
 		btnSave.setMargin(new Insets(2, 34, 2, 14));
-		btnSave.addActionListener(new ActionListener() {
+		//Speicher button Action
+		btnSave.addActionListener(new ActionListener() {		
 			public void actionPerformed(ActionEvent event) {
 				
 				if (event.getSource() == btnSave) {
@@ -1060,7 +1068,7 @@ public class Playermanager {
 						FileOutputStream fos = new FileOutputStream(profile, true);
 						PrintWriter pw = new PrintWriter(fos);
 						
-						pw.println("Armor" + "," + "Defensepoints" );
+						pw.println("Armor" + "," + "Defensepointsarmor" );
 						pw.println(txtArmor1.getText() + "," + txtArmorpoint1.getText());
 						pw.println(txtArmor2.getText() + "," + txtArmorpoint2.getText());
 						pw.println(txtArmor3.getText() + "," + txtArmorpoint3.getText());
@@ -1309,15 +1317,661 @@ public class Playermanager {
 		btnLoad.setMinimumSize(new Dimension(79, 23));
 		btnLoad.setMaximumSize(new Dimension(79, 23));
 		btnLoad.setIcon(new ImageIcon(Playermanager.class.getResource("/image/loadbtn.png")));
+		//Laden button Action
 		btnLoad.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent event) {
+				if (event.getSource() == btnLoad) {
+					int rowc = 0;
+					
+					String line = "";
+					
+							// werte laden für Rüstung und rüstungswerte
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] myArray = new String[10][2];
+						//pfad zur csv setzen
+						String path = "Playerarmor.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								myArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtArmor1.setText(myArray[1][0]); txtArmorpoint1.setText(myArray[1][1]);
+						txtArmor2.setText(myArray[2][0]); txtArmorpoint2.setText(myArray[2][1]);
+						txtArmor3.setText(myArray[3][0]); txtArmorpoint3.setText(myArray[3][1]);
+						txtArmor4.setText(myArray[4][0]); txtArmorpoint4.setText(myArray[4][1]);
+						bReader.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Skills und skillfw
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] skillArray = new String[20][2];
+						//pfad zur csv setzen
+						String path = "Playerskill.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								skillArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtSkill1.setText(skillArray[1][0]); txtskillFw1.setText(skillArray[1][1]);
+						txtSkill2.setText(skillArray[2][0]); txtskillFw2.setText(skillArray[2][1]);
+						txtSkill3.setText(skillArray[3][0]); txtskillFw3.setText(skillArray[3][1]);
+						txtSkill4.setText(skillArray[4][0]); txtskillFw4.setText(skillArray[4][1]);
+						txtSkill5.setText(skillArray[5][0]); txtskillFw5.setText(skillArray[5][1]);
+						txtSkill6.setText(skillArray[6][0]); txtskillFw6.setText(skillArray[6][1]);
+						txtSkill7.setText(skillArray[7][0]); txtskillFw7.setText(skillArray[7][1]);
+						txtSkill8.setText(skillArray[8][0]); txtskillFw8.setText(skillArray[8][1]);
+						txtSkill9.setText(skillArray[9][0]); txtskillFw9.setText(skillArray[9][1]);
+						txtSkill10.setText(skillArray[10][0]); txtskillFw10.setText(skillArray[10][1]);
+						txtSkill11.setText(skillArray[11][0]); txtskillFw11.setText(skillArray[11][1]);
+						txtSkill12.setText(skillArray[12][0]); txtskillFw12.setText(skillArray[12][1]);
+						txtSkill13.setText(skillArray[13][0]); txtskillFw13.setText(skillArray[13][1]);
+						txtSkill14.setText(skillArray[14][0]); txtskillFw14.setText(skillArray[14][1]);
+						txtSkill15.setText(skillArray[15][0]); txtskillFw15.setText(skillArray[15][1]);
+						txtSkill16.setText(skillArray[16][0]); txtskillFw16.setText(skillArray[16][1]);
+						txtSkill17.setText(skillArray[17][0]); txtskillFw17.setText(skillArray[17][1]);
+						txtSkill18.setText(skillArray[18][0]); txtskillFw18.setText(skillArray[18][1]);
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+					
+					line = "";
+					
+					
+					// werte laden für Attribute
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] attributArray = new String[2][8];
+						//pfad zur csv setzen
+						String path = "Playerattributes.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								attributArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtAttention.setText(attributArray[1][0]);
+						txtStrength.setText(attributArray[1][1]);
+						txtKnowledge.setText(attributArray[1][2]);
+						txtMagic.setText(attributArray[1][3]);
+						txtInitiative.setText(attributArray[1][4]);
+						txtMovement.setText(attributArray[1][5]);
+						txtSkillpoints.setText(attributArray[1][6]);
+						
+						
+
+
+
+						
+						
+						bReader.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für tödlich verwundet
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] deadlywoundedArray = new String[2][3];
+						//pfad zur csv setzen
+						String path = "Playerdeadlywounded.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								deadlywoundedArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtDeadlywounded.setText(deadlywoundedArray[1][0]);
+						
+						
+						
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für defensepoints
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] defensepointsArray = new String[20][2];
+						//pfad zur csv setzen
+						String path = "Playerdefensepoints.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								defensepointsArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtDefensepoint1.setText(defensepointsArray[1][0]);
+						txtDefensepoint2.setText(defensepointsArray[2][0]);
+						txtDefensepoint3.setText(defensepointsArray[3][0]);
+						txtDefensepoint4.setText(defensepointsArray[4][0]);
+						txtDefensepoint5.setText(defensepointsArray[5][0]);
+						txtDefensepoint6.setText(defensepointsArray[6][0]);
+						txtDefensepoint7.setText(defensepointsArray[7][0]);
+						txtDefensepoint8.setText(defensepointsArray[8][0]);
+						
+						
+						
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Playerinformation
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playerinformationArray = new String[10][8];
+						//pfad zur csv setzen
+						String path = "Playerinformation.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playerinformationArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtName.setText(playerinformationArray[1][0]);
+						txtFolk.setText(playerinformationArray[1][1]);
+						txtJob.setText(playerinformationArray[1][2]);
+						txtAge.setText(playerinformationArray[1][3]);
+						txtCopper.setText(playerinformationArray[1][4]);
+						txtSilver.setText(playerinformationArray[1][5]);
+						txtGold.setText(playerinformationArray[1][6]);
+						
+						
+						
+						
+						
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Playerlifepoints
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playerlifepointsArray = new String[10][8];
+						//pfad zur csv setzen
+						String path = "Playerlifepoints.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playerlifepointsArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtLifepoints1.setText(playerlifepointsArray[1][0]);
+						txtLifepoints2.setText(playerlifepointsArray[2][0]);
+						txtLifepoints3.setText(playerlifepointsArray[3][0]);
+						txtLifepoints4.setText(playerlifepointsArray[4][0]);
+						txtLifepoints5.setText(playerlifepointsArray[5][0]);
+						txtLifepoints6.setText(playerlifepointsArray[6][0]);
+						txtLifepoints7.setText(playerlifepointsArray[7][0]);
+						txtLifepoints8.setText(playerlifepointsArray[8][0]);
+						
+						
+						
+						
+						
+						
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Playerspezialskills
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playerspezialskillArray = new String[10][8];
+						//pfad zur csv setzen
+						String path = "Playerspezialskill.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playerspezialskillArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtSpecialskill1.setText(playerspezialskillArray[1][0]);
+						txtSpecialskill2.setText(playerspezialskillArray[2][0]);
+						txtSpecialskill3.setText(playerspezialskillArray[3][0]);
+						txtSpecialskill4.setText(playerspezialskillArray[4][0]);
+						txtSpecialskill5.setText(playerspezialskillArray[5][0]);
+						
+						
+						
+						
+						
+						
+						
+
+
+
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Playersuffer
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playersufferArray = new String[10][8];
+						//pfad zur csv setzen
+						String path = "Playersuffer.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playersufferArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtSuffer1.setText(playersufferArray[1][0]);
+						txtSuffer2.setText(playersufferArray[2][0]);
+						txtSuffer3.setText(playersufferArray[3][0]);
+						
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//werte müssen auf null gesetzt werden
+					rowc = 0;
+				
+					line = "";
+					
+					
+					// werte laden für Playerweapon
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playerweaponArray = new String[10][8];
+						//pfad zur csv setzen
+						String path = "Playerweapon.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playerweaponArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+						txtWeapon1.setText(playerweaponArray[1][0]); txtWeapondamage1.setText(playerweaponArray[1][1]); txtWeaponFw1.setText(playerweaponArray[1][2]);
+						txtWeapon2.setText(playerweaponArray[2][0]); txtWeapondamage2.setText(playerweaponArray[2][1]); txtWeaponFw2.setText(playerweaponArray[2][2]);
+						txtWeapon3.setText(playerweaponArray[3][0]); txtWeapondamage3.setText(playerweaponArray[3][1]); txtWeaponFw3.setText(playerweaponArray[3][2]);
+						txtWeapon4.setText(playerweaponArray[4][0]); txtWeapondamage4.setText(playerweaponArray[4][1]); txtWeaponFw4.setText(playerweaponArray[4][2]);
+						
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					// werte laden für Playerwounded
+					try {
+						//array der größe der tabelle anpassen namen ändern
+						String[][] playerwoundedArray = new String[40][40];
+						//pfad zur csv setzen
+						String path = "Playerwounded.csv";
+						
+						//neuen Buffered reader anlegen
+					BufferedReader bReader = new BufferedReader(new FileReader(path));
+						//solange die nächste zeile welche gelesen werden soll nicht null ist zeile für zeile durchgehen
+						while ((line = bReader.readLine()) != null) {
+							
+							// jede zeile wird komplett in einem array gespeichert (vom , getrennte wörter)
+							String[] inArray = line.split(",");
+							
+							//verschachtelte for schleife itterriert durch ein zweidimensionales array und spalltet die langen zeilen in zellen auf
+							//auf welche wie bei einem 2d koordinatensystem zugegriffen werden kann
+							for (int x = 0; x < inArray.length; x++) {
+								
+								playerwoundedArray[rowc][x] = inArray[x];
+								
+							}
+							
+							rowc++;
+						
+							
+						}
+						//textfelder werden die abgespeicherten werte übergeben.
+
+						txtWounded1.setText(playerwoundedArray[6][0]);
+						txtWounded2.setText(playerwoundedArray[7][0]);
+						txtWounded3.setText(playerwoundedArray[8][0]);
+						txtWounded4.setText(playerwoundedArray[9][0]);
+						txtWounded5.setText(playerwoundedArray[10][0]);
+						txtWounded6.setText(playerwoundedArray[11][0]);
+						txtWounded7.setText(playerwoundedArray[12][0]);
+						
+						
+						bReader.close();
+						
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
 			}
 		});
 		btnLoad.setMargin(new Insets(2, 34, 2, 14));
 		btnLoad.setFont(new Font("Ubuntu", Font.BOLD, 14));
 		btnLoad.setBorder(UIManager.getBorder("DesktopIcon.border"));
-		btnLoad.setBounds(195, 11, 140, 47);
+		btnLoad.setBounds(165, 11, 140, 47);
 		frame.getContentPane().add(btnLoad);
+		
+		btnReset = new JButton("Zur\u00FCcksetzen");
+		//Felder zurücksetzen Action
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				if (event.getSource() == btnReset) {
+					
+					String empty = "";
+					
+					//Skillfelder und FW  zurück setzen
+					txtSkill1.setText(empty); txtSkill2.setText(empty); txtSkill3.setText(empty); txtSkill4.setText(empty); txtSkill5.setText(empty); txtSkill6.setText(empty);
+					txtSkill7.setText(empty); txtSkill8.setText(empty); txtSkill9.setText(empty); txtSkill10.setText(empty); txtSkill11.setText(empty); txtSkill12.setText(empty);
+					txtSkill13.setText(empty); txtSkill14.setText(empty); txtSkill15.setText(empty); txtSkill16.setText(empty); txtSkill17.setText(empty); txtSkill18.setText(empty);
+					
+					txtskillFw1.setText(empty); txtskillFw2.setText(empty); txtskillFw3.setText(empty); txtskillFw4.setText(empty); txtskillFw5.setText(empty); txtskillFw6.setText(empty);
+					txtskillFw7.setText(empty); txtskillFw8.setText(empty); txtskillFw9.setText(empty); txtskillFw10.setText(empty); txtskillFw11.setText(empty); txtskillFw12.setText(empty);
+					txtskillFw13.setText(empty); txtskillFw14.setText(empty); txtskillFw15.setText(empty); txtskillFw16.setText(empty); txtskillFw17.setText(empty); txtskillFw18.setText(empty);
+					
+					
+					//Waffen zurück setzen
+					txtWeapon1.setText(empty); txtWeapon2.setText(empty); txtWeapon3.setText(empty); txtWeapon4.setText(empty);
+					txtWeapondamage1.setText(empty); txtWeapondamage2.setText(empty); txtWeapondamage3.setText(empty); txtWeapondamage4.setText(empty);
+					txtWeaponFw1.setText(empty); txtWeaponFw2.setText(empty); txtWeaponFw3.setText(empty); txtWeaponFw4.setText(empty);
+					
+					//sonderfähigkeiten zurücksetzen
+					txtSpecialskill1.setText(empty); txtSpecialskill2.setText(empty); txtSpecialskill3.setText(empty); txtSpecialskill4.setText(empty); txtSpecialskill5.setText(empty);
+					
+					//Spielerinfo zurücksetzen
+					txtAttention.setText(empty); txtStrength.setText(empty); txtKnowledge.setText(empty); txtMagic.setText(empty); txtInitiative.setText(empty); txtMovement.setText(empty);
+					txtSkillpoints.setText(empty);
+					
+					//rüstung und werte zurück setzen
+					txtArmor1.setText(empty); txtArmor2.setText(empty); txtArmor3.setText(empty); txtArmor4.setText(empty);
+					txtArmorpoint1.setText(empty); txtArmorpoint2.setText(empty); txtArmorpoint3.setText(empty); txtArmorpoint4.setText(empty);
+					
+					//leiden zurücksetzen
+					txtSuffer1.setText(empty); txtSuffer2.setText(empty); txtSuffer3.setText(empty);
+					
+					//Charackter informationen zurücksetzen
+					txtName.setText(empty); txtFolk.setText(empty); txtJob.setText(empty); txtAge.setText(empty); txtGold.setText(empty); txtCopper.setText(empty); txtSilver.setText(empty);
+					
+					//defensepoints zurück setzen
+					txtDefensepoint1.setText(empty); txtDefensepoint2.setText(empty); txtDefensepoint3.setText(empty); txtDefensepoint4.setText(empty); txtDefensepoint5.setText(empty);
+					txtDefensepoint6.setText(empty); txtDefensepoint7.setText(empty); txtDefensepoint8.setText(empty); 
+					
+					//lebenspunkte zurück setzen
+					txtLifepoints1.setText(empty); txtLifepoints2.setText(empty); txtLifepoints3.setText(empty); txtLifepoints4.setText(empty); txtLifepoints5.setText(empty); txtLifepoints6.setText(empty);
+					txtLifepoints7.setText(empty); txtLifepoints8.setText(empty);
+					
+					//tötlich verwundet zurücksetzen
+					txtWounded1.setText(empty); txtWounded2.setText(empty); txtWounded3.setText(empty); txtWounded4.setText(empty); txtWounded5.setText(empty);
+					txtWounded6.setText(empty); txtWounded7.setText(empty); txtDeadlywounded.setText(empty);
+					
+					
+				}
+			}
+		});
+		btnReset.setPreferredSize(new Dimension(79, 23));
+		btnReset.setMinimumSize(new Dimension(79, 23));
+		btnReset.setMaximumSize(new Dimension(79, 23));
+		btnReset.setMargin(new Insets(2, 34, 2, 14));
+		btnReset.setFont(new Font("Ubuntu", Font.BOLD, 14));
+		btnReset.setBorder(UIManager.getBorder("DesktopIcon.border"));
+		btnReset.setBounds(94, 139, 140, 47);
+		frame.getContentPane().add(btnReset);
 		JLabel lblCharakterbogen = new JLabel("");
 		lblCharakterbogen.setFocusable(false);
 		lblCharakterbogen.setBounds(0, 0, 1376, 937);
